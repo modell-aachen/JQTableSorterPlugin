@@ -1,7 +1,5 @@
 /* tables */
 table.tablesorter {
-  font-family:arial;
-  background-color: #cdcdcd;
   margin:10px 0pt 15px;
   width: 100%;
   text-align: left;
@@ -10,8 +8,8 @@ table.tablesorter {
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
   background-color: #fff;
   color: #999;
-  padding: 4px 20px;
-  text-align: center;
+  text-align: left;
+  padding: 4px 20px 8px 4px;
 }
 
 table.tablesorter thead tr .header {
