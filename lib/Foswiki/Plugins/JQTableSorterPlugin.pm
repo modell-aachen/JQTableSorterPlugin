@@ -6,8 +6,8 @@ use warnings;
 use Foswiki::Func ();
 use Foswiki::Plugins ();
 
-our $VERSION = "1.0.1";
-our $RELEASE = "1.0.1";
+our $VERSION = "1.0.2";
+our $RELEASE = "1.0.2";
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = "Enables sorting functionality for Foswiki tables.";
 
