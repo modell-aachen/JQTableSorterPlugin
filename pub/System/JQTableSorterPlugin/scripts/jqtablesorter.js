@@ -11,7 +11,8 @@
 
   $(document).ready( function() {
     var sortableTables = $('table.tablesorter');
-    $.each( sortableTables, function( index, table ) {
+    $(sortableTables).livequery( function() {
+      var table = this;
       var opts = $(table).metadata();
 
       // Fix: jquery.tablesorter erzeugt Fehler bei leerem <tbody>
