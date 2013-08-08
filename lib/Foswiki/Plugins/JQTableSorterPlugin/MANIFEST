@@ -8,4 +8,9 @@ pub/System/JQTableSorterPlugin/tablesorter/jquery.metadata.js
 pub/System/JQTableSorterPlugin/styles/asc_white.gif
 pub/System/JQTableSorterPlugin/styles/bg_white.gif
 pub/System/JQTableSorterPlugin/styles/desc_white.gif
+
+pub/System/JQTableSorterPlugin/styles/asc_black.gif
+pub/System/JQTableSorterPlugin/styles/bg_gray.gif
+pub/System/JQTableSorterPlugin/styles/desc_black.gif
+
 pub/System/JQTableSorterPlugin/styles/theme.css

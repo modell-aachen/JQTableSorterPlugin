@@ -8,15 +8,14 @@ table.tablesorter {
 }
 
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-  background-color: #8dbdd8;
-  color: #ffffff;
-  border: 0px solid #FFF;
+  background-color: #fff;
+  color: #999;
   padding: 4px 20px;
   text-align: center;
 }
 
 table.tablesorter thead tr .header {
-  background-image: url(bg_white.gif);
+  background-image: url(bg_gray.gif);
   background-repeat: no-repeat;
   background-position: center right;
   cursor: pointer;
@@ -24,28 +23,33 @@ table.tablesorter thead tr .header {
 
 table.tablesorter tbody td {
   color: #3d3d3d;
-  padding: 4px;
-  background-color: #FFF;
-  vertical-align: top;
+  background-color: #fff;
+  vertical-align: center;
+  margin: 8px 1px;
+  padding: 8px;
+  background: #f8fcff;
 }
 
 table.tablesorter tbody tr.odd td {
-  background-color:#f3f3f3;
+  background-color:#f8fcff;
 }
-
 table.tablesorter thead tr .headerSortUp {
-  background-image: url(asc_white.gif);
+  background-image: url(asc_black.gif);
 }
 
 table.tablesorter thead tr .headerSortDown {
-  background-image: url(desc_white.gif);
+  background-image: url(desc_black.gif);
 }
 
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-  background-color: #6b7f93;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
 }
 
 table.tablesorter tr.even:hover td,
 table.tablesorter tr.odd:hover td {
-  background-color: #ddd;
+  background-color: #e8f7ff;
+  margin: 8px 1px;
+  padding: 8px;
 }
