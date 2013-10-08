@@ -1,12 +1,16 @@
 (function($) {
+  var regex = new RegExp(/^[0-9]{1,2} [A-Za-z]{3,10} [0-9]{4}/);
   $.tablesorter.addParser({
     id: "qwikiDate",
     is: function (s) {
-      var pattern = /^[0-9]{1,2} [A-Za-z]{3,10} [0-9]{4}$/;
-      return s.match(new RegExp(pattern));
-    }, format: function (s) {
-      return $.tablesorter.formatFloat(new Date(s).getTime());
-    }, type: "numeric"
+      return s.match(regex);
+    },
+    format: function (s) {
+      var m = s.match(regex);
+      if(!m) return -1;
+      return $.tablesorter.formatFloat(new Date(m[0]).getTime());
+    },
+    type: "numeric"
   });
 
   $(document).ready( function() {
