@@ -3,10 +3,10 @@
   $.tablesorter.addParser({
     id: "qwikiDate",
     is: function (s) {
-      return s.match(regex);
+      return s.trim().match(regex);
     },
     format: function (s) {
-      var m = s.match(regex);
+      var m = s.trim().match(regex);
       if(!m) return -1;
       return $.tablesorter.formatFloat(new Date(m[0]).getTime());
     },
