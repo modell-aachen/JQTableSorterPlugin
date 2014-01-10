@@ -1,5 +1,15 @@
 (function($) {
   var regex = new RegExp(/^[0-9]{1,2} [A-Za-z]{3,10} [0-9]{4}/);
+
+  if ( !String.prototype.trim ) {
+    String.prototype.trim = function() {
+      var regex = /^\s*(.*)\s*$/;
+      if ( regex.test( this ) ) {
+        return this.match( regex )[1];
+      }
+    }
+  }
+
   $.tablesorter.addParser({
     id: "qwikiDate",
     is: function (s) {
