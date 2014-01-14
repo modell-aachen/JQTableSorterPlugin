@@ -15,7 +15,7 @@ sub initPlugin {
 
   my $scripts = <<SCRIPTS;
 <script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/tablesorter/jquery.metadata.js?version=$RELEASE"></script>
-<script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/tablesorter/jquery.tablesorter.min.js?version=$RLEASE"></script>
+<script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/tablesorter/jquery.tablesorter.min.js?version=$RELEASE"></script>
 <script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/scripts/jqtablesorter.js?version=$RELEASE"></script>
 SCRIPTS
 
