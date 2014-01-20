@@ -1,4 +1,6 @@
 !noci
+data/System/JQTableSorterPlugin.txt
+
 lib/Foswiki/Plugins/JQTableSorterPlugin.pm
 
 pub/System/JQTableSorterPlugin/scripts/jqtablesorter.js

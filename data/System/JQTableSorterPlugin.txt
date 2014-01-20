@@ -1,0 +1,20 @@
+%META:TOPICPARENT{name="Plugins"}%
+<!--
+   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION%
+-->
+---+!! JQTableSorter Plugin
+
+%SHORTDESCRIPTION%
+
+---++ Installation
+%$INSTALL_INSTRUCTIONS%
+
+---++ Info
+
+|  Author: | SvenMeyer |
+|  Copyright: | 2013, Modell Aachen GmbH, All Rights Reserved |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Dependencies: | JQueryPlugin |
+|  Version: | %$VERSION% |
+|  Release: | %$RELEASE% |
+|  Change&nbsp;History: | <!-- versions below in reverse order -->&nbsp; |
