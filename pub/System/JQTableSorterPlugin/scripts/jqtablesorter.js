@@ -1,5 +1,6 @@
 (function($) {
-  var regex = new RegExp(/^[0-9]{1,2} [A-Za-z]{3,10} [0-9]{4}/);
+  var pattern1 = new RegExp(/^\d{1,2} [A-Za-z]{3,10} \d{4}/); // 13 Jan 2000, 1 Feb 2001
+  var pattern2 = new RegExp(/^\d{1,2}\.\s?\d{1,2}\.\s?\d{4}/); // 23.10.1999, 1.12.2003
 
   if ( !String.prototype.trim ) {
     String.prototype.trim = function() {
@@ -13,11 +14,23 @@
   $.tablesorter.addParser({
     id: "qwikiDate",
     is: function (s) {
-      return s.trim().match(regex);
+      s = s.trim();
+      var m1 = s.match(pattern1);
+      var m2 = s.match(pattern2);
+      return m1 || m2;
     },
     format: function (s) {
-      var m = s.trim().match(regex);
-      if(!m) return -1;
+      var s = s.trim();
+      var m = null;
+      var m1 = s.match(pattern1);
+      if ( m1 ) {
+        m = m1;
+      } else {
+        var m2 = s.match(pattern2);
+        if ( !m2 ) return -1;
+        m = m2;
+      }
+
       return $.tablesorter.formatFloat(new Date(m[0]).getTime());
     },
     type: "numeric"
