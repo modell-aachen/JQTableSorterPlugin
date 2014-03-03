@@ -17,6 +17,7 @@ sub initPlugin {
 <script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/tablesorter/jquery.metadata.js?version=$RELEASE"></script>
 <script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/tablesorter/jquery.tablesorter.min.js?version=$RELEASE"></script>
 <script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/scripts/jqtablesorter.js?version=$RELEASE"></script>
+<script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/scripts/date.format.js?version=$RELEASE"></script>
 SCRIPTS
 
   Foswiki::Func::addToZone(
