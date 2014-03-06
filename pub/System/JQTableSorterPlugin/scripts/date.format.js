@@ -85,7 +85,8 @@ var dateFormat = function () {
       }
     }
 
-    if (isNaN(date)) throw SyntaxError("invalid date");
+    if (isNaN(date)) return null;
+    // if (isNaN(date)) throw SyntaxError("invalid date");
     mask = String(dF.masks[mask] || mask || dF.masks["default"]);
 
     // Allow setting the utc argument via the mask
