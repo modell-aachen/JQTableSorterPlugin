@@ -73,10 +73,19 @@ var dateFormat = function () {
       }
     }
 
-    // Passing date through Date applies Date.parse, if necessary
-    date = date ? new Date(date) : new Date;
-    if (isNaN(date)) throw SyntaxError("invalid date");
+    if ( date ) {
+      // german date format
+      var pattern = /^(\d{2})\.(\d{2})\.(\d{4})(\(.*\))?$/;
+      var m = date.match( pattern );
+      if ( m ) {
+        date = new Date( m[3], parseInt( m[2] ) - 1, m[1] );
+      } else {
+        // Passing date through Date applies Date.parse, if necessary
+        date = date ? new Date(date) : new Date;
+      }
+    }
 
+    if (isNaN(date)) throw SyntaxError("invalid date");
     mask = String(dF.masks[mask] || mask || dF.masks["default"]);
 
     // Allow setting the utc argument via the mask
