@@ -33,7 +33,8 @@
 
       // Fix: jquery.tablesorter erzeugt Fehler bei leerem <tbody>
       var body = $(table).find('tbody');
-      if ( $(body).html() == '' ) {
+      if ( $(body).children('tr').length == 0 ) {
+        $(body).empty();
         $(body).append('<tr><td style="display: none;"></td></tr>');
       }
 
