@@ -26,7 +26,7 @@
   });
 
   $(document).ready( function() {
-    var sortableTables = $('table.tablesorter');
+    var sortableTables = $('table.tablesorter, table.jqsortable');
     $(sortableTables).livequery( function() {
       var table = this;
       var opts = $(table).metadata();
