@@ -10,6 +10,14 @@ table.tablesorter thead tr th, table.tablesorter tfoot tr th {
   color: #999;
   text-align: left;
   padding: 4px 20px 8px 4px;
+  vertical-align: middle;
+}
+
+table.tablesorter.Modac_Standard thead tr th, table.tablesorter.Modac_Standard tfoot tr th {
+  background-color: #003c89;
+  color: #fff;
+  padding: 0 3px;
+  text-align: center;
 }
 
 table.tablesorter thead tr .header {
@@ -17,6 +25,10 @@ table.tablesorter thead tr .header {
   background-repeat: no-repeat;
   background-position: center right;
   cursor: pointer;
+}
+
+table.tablesorter.Modac_Standard thead tr .header {
+  background-image: url(bg_white.gif);
 }
 
 table.tablesorter tbody td {
@@ -28,15 +40,29 @@ table.tablesorter tbody td {
   background: #f8fcff;
 }
 
+table.tablesorter.Modac_Standard tbody td {
+  background: #f9f9f9;
+  padding: 0 3px;
+}
+
 table.tablesorter tbody tr.odd td {
   background-color:#f8fcff;
 }
+
 table.tablesorter thead tr .headerSortUp {
   background-image: url(asc_black.gif);
 }
 
+table.tablesorter.Modac_Standard thead tr .headerSortUp {
+  background-image: url(asc_white.gif);
+}
+
 table.tablesorter thead tr .headerSortDown {
   background-image: url(desc_black.gif);
+}
+
+table.tablesorter.Modac_Standard thead tr .headerSortDown {
+  background-image: url(desc_white.gif);
 }
 
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
