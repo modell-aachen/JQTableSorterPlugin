@@ -37,7 +37,12 @@
         $(body).empty();
         $(body).append('<tr><td style="display: none;"></td></tr>');
       }
-
+      if($(this).hasClass('autonumbered')){
+        if(!opts)
+          opts = {headers: { 0: { sorter: false }  } };
+        else
+          opts["headers"] = { 0: { sorter: false }  };
+      }
       if ( opts ) {
         $(table).tablesorter( opts );
       }
