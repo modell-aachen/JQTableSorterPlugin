@@ -6,6 +6,33 @@
 
 %SHORTDESCRIPTION%
 
+---++!! Available sorters
+
+| *Type* | *Description* | *example* | *Main purpose* |
+| =qwikiDate= | Sorts dates according to their epoch. Supports various formats, including German strings.  | 11 Nov 2015 - 07:48 &gt; 24 Jul 2013 - 09:20 | Dates |
+| =qwikiSize= | Sorts numbers with SI/IEC-prefixes.<br />If there are two numbers in a string, the second will be chosen. This is to accommodate "compare" pages (the first one is struck out).  | 2 !Kib &lt; 1 !MiB | File sizes. |
+| =metadata= | Sort according to cell metadata.<br /> Add =parserMetadataName= to the table's config, or use =sortValue=.  | &nbsp; | Freestyle |
+| =time= | Sort times. 24h and 12h formats supported.  | 1:00 pm &gt; 2:30 am | Time of day |
+| =percent= | Sort percentages | 44% &gt; 10% | Percentages |
+| =url= | Sort urls, omiting the protocol.  | !http://a.de &lt; !ftp://b.de | Urls |
+| =ipAddress= | Sort ip addresses.  | 10.200.200.200 &lt; 192.168.1.1 | Ip |
+| =currency= | Sort price values, omitting the currency symbol (supported: € $ £ ?). Use '.' as delimitor.  | € 1.10 &lt; $ 2.10 | Prices |
+| =digit= | Sort numercal values. Any trailing characters are omitted. Use '.' as delimitor.  | 10 cakes &gt; 2.5 cookies | Any type of number |
+| =text= | Sort anything lexicographically.  | abc &lt; xyz | Anything |
+
+
+---++!! Example
+<verbatim>
+<table class="tablesorter {headers:{0:{sorter:&quot;metadata&quot;}}}">
+    <thead>
+        <tr><th>Test</th></tr>
+    </thead>
+    <tbody>
+        <tr><td class="{sortValue:2}">a</td></tr>
+        <tr><td class="{sortValue:1}">b</td></tr>
+    </tbody>
+</table>
+</verbatim>
 ---++ Installation
 %$INSTALL_INSTRUCTIONS%
 
