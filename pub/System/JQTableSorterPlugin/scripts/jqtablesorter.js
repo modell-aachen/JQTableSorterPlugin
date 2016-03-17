@@ -77,8 +77,13 @@
           body = $('<tbody></tbody>').appendTo(table);
       }
       if ( $(body).children('tr').length == 0 ) {
+        var cellCount = $(table).find('thead th').length;
+        var tr = $('<tr></tr>');
+        for (var i = 0; i < cellCount; i++) {
+          tr.append('<td style="display: none;"></td>');
+        }
         $(body).empty();
-        $(body).append('<tr><td style="display: none;"></td></tr>');
+        $(body).append(tr);
       }
       if($(this).hasClass('autonumbered')){
         if(!opts)
