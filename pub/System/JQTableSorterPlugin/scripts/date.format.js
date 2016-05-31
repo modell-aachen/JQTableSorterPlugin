@@ -81,6 +81,7 @@ var dateFormat = function () {
         date = new Date( m[3], parseInt( m[2] ) - 1, m[1] );
       } else {
         // Passing date through Date applies Date.parse, if necessary
+        date = date.replace('-',' ');
         date = date ? new Date(date) : new Date;
       }
     }
