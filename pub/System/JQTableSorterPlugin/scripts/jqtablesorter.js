@@ -28,9 +28,9 @@
   $.tablesorter.addParser({
     id: "qwikiSize",
     is: function (s) {
-      var size = null;
-      var match = /\d+(?:[ kmgtpKMGTP]|$)/.exec(s);
-      return match;
+      // always return size -> if a user wants to sort by size he has to manually
+      // specify the sorter
+      return false;
     },
     format: function (s) {
       var size = null;
