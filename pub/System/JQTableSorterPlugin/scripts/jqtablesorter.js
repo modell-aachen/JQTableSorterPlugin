@@ -64,7 +64,7 @@
     },
     type: "numeric"
   });
-
+  /*global foswiki*/
   $(document).ready( function() {
     var sortableTables = $('table.tablesorter, table.jqsortable');
     $(sortableTables).livequery( function() {
@@ -75,6 +75,24 @@
       var body = $(table).find('tbody');
       if ( !body.length ) {
           body = $('<tbody></tbody>').appendTo(table);
+      }
+      // Sortieren funktioniert nicht, wenn es weniger Header als sortierbare Spalten gibt. Daher tablesorter nicht initialisieren, falls mit einer Ueberschrift ueber mehrere Spalten sortierbar sein soll
+      var headercolumns = $(table).find('th').length;
+      var booleanValue = false;
+
+      if(headercolumns > 0) {
+        $(body).children('tr').each(function() {
+          // Wenn es eine Zeile in der Tabelle gibt mit mehr Spalten als es Ueberschriften in der Tabelle gibt --> Nicht initialisieren
+          if($(this).find('td').length > headercolumns) {
+            booleanValue = true;
+          }
+        });
+      }
+      if(booleanValue) {
+        $(window).load(function() {
+          alert(foswiki.jsi18n.get("ModacSkin", "It is not possible to activate sorting for tables, that have less headers than sortable columns. We therefore deactivated sorting in your table."));
+        });
+        return;
       }
       if ( $(body).children('tr').length == 0 ) {
         var cellCount = $(table).find('thead th').length;
