@@ -42,11 +42,6 @@ SCRIPT
   return 1;
 }
 
-sub beforeSaveHandler {
-  my ($text, $topic, $web, $error, $meta) = @_;
-
-
-}
 
 1;
 
