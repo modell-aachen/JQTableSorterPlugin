@@ -33,7 +33,19 @@ SCRIPTS
     "<link rel='stylesheet' type='text/css' media='all' href='%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/styles/theme.css' />"
   );
 
+  Foswiki::Func::addToZone( 'script', 'JQTABLESORTERPLUGIN::I18N', <<SCRIPT, 'jsi18nCore' );
+<script type="text/javascript" src="%PUBURLPATH%/%SYSTEMWEB%/JQTableSorterPlugin/scripts/i18n/jsi18n.de.js"></script>
+SCRIPT
+
+  Foswiki::Plugins::JQueryPlugin::createPlugin('jqp::sweetalert2');
+
   return 1;
+}
+
+sub beforeSaveHandler {
+  my ($text, $topic, $web, $error, $meta) = @_;
+
+
 }
 
 1;

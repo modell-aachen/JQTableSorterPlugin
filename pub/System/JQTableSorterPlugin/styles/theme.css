@@ -20,3 +20,10 @@ table.tablesorter thead tr .headerSortDown {
 table.tablesorter.Modac_Standard thead tr .headerSortDown {
   background-image: url(desc_white.gif);
 }
+
+.sweet-alert h2 {
+  border: none; }
+
+.sweet-alert hr {
+  color: #fff;
+  background-color: #fff; }
