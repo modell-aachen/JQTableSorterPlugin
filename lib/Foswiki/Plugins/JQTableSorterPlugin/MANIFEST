@@ -4,6 +4,7 @@ data/System/JQTableSorterPlugin.txt
 lib/Foswiki/Plugins/JQTableSorterPlugin.pm
 
 pub/System/JQTableSorterPlugin/scripts/jqtablesorter.js
+pub/System/JQTableSorterPlugin/scripts/i18n/jsi18n.de.js
 pub/System/JQTableSorterPlugin/tablesorter/jquery.tablesorter.min.js
 pub/System/JQTableSorterPlugin/tablesorter/jquery.metadata.js
 pub/System/JQTableSorterPlugin/scripts/date.format.js
