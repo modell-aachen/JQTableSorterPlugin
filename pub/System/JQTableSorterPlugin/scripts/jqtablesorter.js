@@ -130,7 +130,7 @@
       var table = this;
       var opts = $(table).metadata();
 
-      // Fix: jquery.tablesorter erzeugt Fehler bei leerem <tbody>
+      // Fix: jquery.tablesorter generates error for empty <tbody>
       var body = $(table).find('>tbody');
       if ( !body.length ) {
           body = $('<tbody></tbody>').appendTo(table);
