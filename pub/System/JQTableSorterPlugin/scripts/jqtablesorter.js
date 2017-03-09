@@ -78,7 +78,7 @@
 
           if(headercolumns > 0) {
             $(body).children('tr').each(function() {
-              // If there is a row with more columns than the table header, table structure is faulty 
+              // If there is a row with more columns than the table header, table structure is faulty
               if($(this).find('td').length > headercolumns) {
                 isTableStructureFaulty = true;
               }
@@ -120,7 +120,7 @@
             });
           }
         });
-        
+
         return shouldSaveGoOn;
       });
     }
@@ -130,17 +130,17 @@
       var table = this;
       var opts = $(table).metadata();
 
-      // Fix: jquery.tablesorter generates error for empty <tbody>
-      var body = $(table).find('tbody');
+      // Fix: jquery.tablesorter erzeugt Fehler bei leerem <tbody>
+      var body = $(table).find('>tbody');
       if ( !body.length ) {
           body = $('<tbody></tbody>').appendTo(table);
       }
-      // If there is a faulty table in a topic, just don't initialize plugin 
+      // If there is a faulty table in a topic, just don't initialize plugin
       if(testIfTableStructureIsFaulty(this)) {
         return;
       }
       if ( $(body).children('tr').length == 0 ) {
-        var cellCount = $(table).find('thead th').length;
+        var cellCount = $(table).find('>thead th').length;
         var tr = $('<tr></tr>');
         for (var i = 0; i < cellCount; i++) {
           tr.append('<td style="display: none;"></td>');
@@ -150,9 +150,10 @@
       }
       if($(this).hasClass('autonumbered')){
         if(!opts)
-          opts = {headers: { 0: { sorter: false }  } };
+          opts = {headers: { 0: { sorter: false }  }, selectorHeaders: '>thead th' };
         else
           opts["headers"] = { 0: { sorter: false }  };
+          opts["selectorHeaders"] = '>thead th';
       }
       if ( opts ) {
         $(table).tablesorter( opts );
